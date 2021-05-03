@@ -100,6 +100,8 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
         gym \
         flask \
         networkx \
+        websocket-client \
+        apache-airflow \
         && \
 
     $PIP_INSTALL \
