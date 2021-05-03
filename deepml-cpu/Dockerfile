@@ -34,6 +34,10 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
     apt-get update --fix-missing && \
     apt-get install -y \
         nginx \
+        nodejs \
+        npm \
+        gcc \
+        procps \
         binutils && \
     apt-get clean && \
 
@@ -73,6 +77,13 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 
     $PIP_INSTALL \
         torch_optimizer \
+        # PyTorch Geometric
+        # https://pytorch-geometric.com/whl/
+        torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cpu.html \
+        torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cpu.html \
+        torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cpu.html \
+        torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cpu.html \
+        torch-geometric \
         && \
 
 # ==================================================================
@@ -88,6 +99,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
         shap \
         gym \
         flask \
+        networkx \
         && \
 
     $PIP_INSTALL \
