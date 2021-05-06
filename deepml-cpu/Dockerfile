@@ -121,6 +121,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
     $PIP_INSTALL \
         yapf \
         jupyter \
+        jupyterlab \
         jupyter_contrib_nbextensions \
         jupyter_nbextensions_configurator \
         jedi==0.17.2 \
