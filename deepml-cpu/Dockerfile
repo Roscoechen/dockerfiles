@@ -127,6 +127,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
         jedi==0.17.2 \
         parso==0.7.1 \
         nbconvert==5.6.1 \
+        apache-airflow==2.0.2 \
         && \
     jupyter contrib nbextension install --user && \
     jupyter nbextension enable code_prettify/code_prettify && \
