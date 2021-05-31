@@ -139,7 +139,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
         build-essential \
         cmake && \
     ln -s /opt/conda/lib/python3.8/site-packages/numpy/core/include/numpy /usr/include/numpy && \
-    $GIT_CLONE --branch 4.3.0 https://github.com/opencv/opencv ~/opencv && \
+    $GIT_CLONE https://github.com/opencv/opencv ~/opencv && \
     mkdir -p ~/opencv/build && cd ~/opencv/build && \
     cmake -D CMAKE_BUILD_TYPE=RELEASE \
           -D CMAKE_INSTALL_PREFIX=/opt/conda \
