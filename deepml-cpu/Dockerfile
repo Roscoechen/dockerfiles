@@ -36,6 +36,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
         nginx \
         nodejs \
         npm \
+        libopencv-highgui3.2 \
 #        gcc \
 #        procps \
         binutils && \
